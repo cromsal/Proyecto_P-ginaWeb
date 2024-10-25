@@ -1,0 +1,131 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-... tu código de integridad ..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <title>Portafolio Web</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="banner">
+            <div class="navbar">
+                <img src="../imagenes/logo-tienda.png" class="logo">
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="yeezy.html">YEEZY</a></li>
+                    <li><a href="adidas.html">ADIDAS</a></li>
+                    <li><a href="air jordan.html">AIR JORDAN</a></li>
+                    <li><a href="nike.html">NIKE</a></li>     
+                </ul>
+            </div>
+            <div class="texto">
+                <h2>NEW STYLE</h2>
+                <p>TIENDA DE ZAPATILLAS</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="custom-select" id="customSelect">
+                <div class="select-items" style="display: none;">
+                </div>
+                <div class="select-selected"></div>
+            </div>
+            <input type="text" id="campoBusqueda" placeholder="Buscar...">
+            <select id="selectItems"></select>
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila" id="fila">
+                <div class="item" id="item1" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas1.png" alt="">
+                    </div>
+                    <p class="descripcion">Adidas Campus Bad Bunny Cream</p>
+                    <span class="precio">€ 276</span>
+                </div>
+                <div class="item" id="item2" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas2.png" alt="">
+                    </div>
+                    <p class="descripcion" id>Adidas Gazelle Indoor Blue Fusion</p>
+                    <span class="precio">€ 155</span>
+                </div>
+                <div class="item" id="item3" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas3.png" alt="">
+                    </div>
+                    <p class="descripcion">Adidas Superstar Sean Wotherspoon Superearth Black</p>
+                    <span class="precio">€ 147</span>
+                </div>
+                <div class="item" id="item4" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas4.png" alt="">
+                    </div>
+                    <p class="descripcion">Adidas Forum 84 Hi Off White Pink Red</p>
+                    <span class="precio">€ 153</span>
+                </div>
+            </div>
+            <div class="fila" id="fila">
+                <div class="item" id="item5" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas5.png" alt="">
+                    </div>
+                    <p class="descripcion">Adidas NMD Hu Pharrell Extra Eye White</p>
+                    <span class="precio">€ 194</span>
+                </div>
+                <div class="item" id="item6" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas6.png" alt="">
+                    </div>
+                    <p class="descripcion">Adidas NMD Hu Pharrell Green Complexland</p>
+                    <span class="precio">€ 179</span>
+                </div>
+                <div class="item" id="item7" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas7.png" alt="">
+                    </div>
+                    <p class="descripcion">Adidas Blackburn Spzl Collegiate Green</p>
+                    <span class="precio">€ 200</span>
+                </div>
+                <div class="item" id="item8" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/adidas/adidas8.png" alt="">
+                    </div>
+                    <p class="descripcion">Adidas Superstar Prada White Black</p>
+                    <span class="precio">€ 483</span>
+                </div>
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img alt="" id="img">
+                <h2 id="modelo">Adidas Modelo 1</h2>
+                <p id="descripcion">Descripción Modelo 1</p>
+
+                <span class="precio" id="precio">€ </span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="talla">SIZE</label>
+                        <select name="" id="">
+                            <option value="">40</option>
+                            <option value="">42</option>
+                            <option value="">44</option>
+                            <option value="">46</option>
+                        </select>
+                    </div>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../script/scrip"></script>
+</body>
+</html>

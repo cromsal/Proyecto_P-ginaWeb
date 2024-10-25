@@ -1,0 +1,70 @@
+let mostrador = document.getElementById("mostrador");
+let seleccion = document.getElementById("seleccion");
+let imgSeleccionada = document.getElementById("img");
+let modeloSeleccionado = document.getElementById("modelo");
+let descripSeleccionada = document.getElementById("descripcion");
+let precioSeleccionado = document.getElementById("precio");
+
+function cargar(item){
+    quitarBordes();
+    mostrador.style.width = "60%";
+    seleccion.style.width = "40%";
+    seleccion.style.opacity = "1";
+    item.style.border = "2px solid #787272";
+
+    imgSeleccionada.src = item.getElementsByTagName("img")[0].src;
+
+    modeloSeleccionado.innerHTML =  item.getElementsByTagName("p")[0].innerHTML;
+
+    descripSeleccionada.innerHTML = "Descripción del modelo ";
+
+    precioSeleccionado.innerHTML =  item.getElementsByTagName("span")[0].innerHTML;
+
+
+}
+function cerrar(){
+    mostrador.style.width = "100%";
+    seleccion.style.width = "0%";
+    seleccion.style.opacity = "0";
+    quitarBordes();
+}
+function quitarBordes(){
+    var items = document.getElementsByClassName("item");
+    for(i=0;i <items.length; i++){
+        items[i].style.border = "none";
+    }
+}
+document.getElementById('campoBusqueda').addEventListener('input', function() {
+    var textoABuscar = this.value.trim().toLowerCase();
+    var selectItemsDiv = document.querySelector('.select-items');
+    var selectSelected = document.querySelector('.select-selected');
+    var elementos = document.querySelectorAll('.item');
+
+    selectItemsDiv.innerHTML = '';
+
+    if (textoABuscar.length > 0) {
+        elementos.forEach(function(elemento) {
+            var descripcion = elemento.querySelector('.descripcion').innerText.toLowerCase();
+            var imagen = elemento.querySelector('img').src;
+
+            if (descripcion.includes(textoABuscar)) {
+                var divOption = document.createElement('div');
+                divOption.innerHTML = `
+                    <img src="${imagen}" alt="imagen">
+                    <span>${descripcion}</span>
+                `;
+                divOption.addEventListener('click', function() {
+                    // Aquí redirige a la página del artículo específico
+                    window.location.href = '#fila';
+                });
+                selectItemsDiv.appendChild(divOption);
+            }
+        });
+
+        selectItemsDiv.style.display = 'block';
+        selectSelected.style.display = 'none';
+    } else {
+        selectItemsDiv.style.display = 'none';
+        selectSelected.style.display = 'block';
+    }
+});

@@ -1,0 +1,481 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI';
+  box-sizing: border-box;
+}
+.banner{
+  height: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../imagenes/fondo-banner.jpeg);
+  background-position:center ;
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #787272;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+/*TAMAÑO DE LA LUPA Y COLOR*/
+.fa-search {
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+}
+/*PALABRA BUSCAR...*/
+input::placeholder {
+  color: #ffffff;
+}
+/*LETRAS AL ESCRIBIR EN LA BUSQUEDA*/
+input{
+  width: 240px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color:white;
+}
+.sesion{
+  background: #787272;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.content h1{
+  font-size: 70px;
+  margin-top: 80px;
+}
+.mostrador{
+  width: 100%;
+  transition: .5s ease;
+}
+.mostrador .fila .item:hover{
+  background-color: #e6e6e6;
+}
+.mostrador .fila .item img{
+  width: 100%;
+  margin: 30px 0;
+}
+.mostrador .fila .item .descripcion{
+  color: #707070;
+  font-weight: bold;
+}
+.contenido .mostrador .fila .item .precio{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+#selectitems {
+  width: 200px;
+  max-height: 200px;
+  overflow-y: auto; /* Añade una barra de desplazamiento vertical si el contenido es demasiado grande */
+  display: none; 
+  width: 200px; 
+  height: 200px; 
+  font-size: 14px; 
+  border: 1px solid #ccc; 
+  padding: 5px;
+}
+.custom-select {
+  display: inline-block;
+  width: 296px;
+  position: absolute; 
+  top: 41px;
+  left: 3px
+}
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.select-items {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1;
+}
+.select-items div {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.select-items div:hover {
+  background-color: #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+body{
+  overflow-x: hidden;
+  width: 100%;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
+  }
+/*LISTA DEL BANNER*/
+  .navbar{
+  width: 85%;
+  margin: auto;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 2.07px;
+  position: relative;
+  top: 10px;
+}
+/*CAJA DE LA BUSQUEDA */
+.box{
+  background-color:#787272;
+  width: 300px;
+  height: 38px;
+  border-radius: 50px;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 0px 25px;
+  position:absolute;
+  top:175px;
+  left:40px;
+}
+/*TEXTO CENTRAL*/
+.content{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+
+}
+.content p{
+  margin: 0px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+.texto{
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+button{
+  width: 165px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #787272;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow:hidden;
+}
+.contenido{
+  max-width: 600px;
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+}
+.mostrador .fila{
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.mostrador .fila .item{
+  max-width: 210px;
+  padding: 30px;
+  height: 320px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+  float: left;
+}
+.select-items img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+.seleccion{
+  transition: .5s ease;
+  opacity: 0;
+  width: 0%;
+  height: 489px;
+  border: 1px solid #ccc;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.info{
+  padding: 20px;
+}
+.info img{
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+}
+.info h2{
+  color: #707070;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.info p{
+  font-size: 14px;
+  color: #707070;
+  margin-bottom: 10px;
+}
+.info .precio{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  display: block;
+}
+.info .fila{
+  align-items: flex-end;
+}
+.info .fila label{
+  display: block;
+  margin-bottom: 10px;
+}
+.info .fila select{
+  width: 70px;
+  padding: 6px;
+  margin-right: 30px;
+}
+.info .fila button{
+  height: 38px;
+  width:131px ;
+  border: none;
+  padding: 0 23px;
+  color: #fff;
+  background-color: black;
+  position: relative;
+  right: 21px;
+}
+/*CARRITO*/
+.fa-shopping-cart {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: absolute;
+  top: 88px;
+  left:398px ;
+  }
+}
+
+@media only screen and (min-width: 601px){
+.logo{
+    width: 120px;
+    cursor: pointer;
+  }
+/*LISTA DEL BANNER*/
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+/*CAJA BUSQUEDA*/
+.box{
+  background-color:#787272;
+  width: 300px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 0px 25px;
+  position:absolute;
+  top:50px;
+  left:450px;
+}
+
+/*CARRITO*/
+.fa-shopping-cart {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: absolute;
+  top: 59px;
+  left: 1458px;}
+
+button:hover span{
+  width: 100%;
+}
+button:hover {
+  border: none;
+}
+/*TEXTO CENTRAL*/
+.content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+.texto{
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #787272;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow:hidden;
+}
+.seleccion{
+  transition: .5s ease;
+  opacity: 0;
+  width: 0%;
+  border: 1px solid #ccc;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.contenido{
+  max-width: 1200px;
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
+}
+.mostrador .fila .item{
+  max-width: 210px;
+  padding: 30px;
+  height: 320px;
+  text-align: center;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+}
+.mostrador .fila{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.select-items img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+/*BOTON DE CERRAR*/
+.cerrar{
+  position: absolute;
+  right: 0;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.info{
+  padding: 20px;
+}
+.info img{
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+}
+.info h2{
+  color: #707070;
+  margin-bottom: 10px;
+}
+.info p{
+  font-size: 14px;
+  color: #707070;
+  margin-bottom: 10px;
+}
+.info .precio{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  display: block;
+}
+.info .fila{
+  display: flex;
+  align-items: flex-end;
+}
+.info .fila label{
+  display: block;
+  margin-bottom: 10px;
+}
+.info .fila select{
+  width: 100px;
+  font-size: 18px;
+  padding: 6px;
+  margin-right: 30px;
+}
+.info .fila button{
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  color: #fff;
+  background-color: black;
+}
+}

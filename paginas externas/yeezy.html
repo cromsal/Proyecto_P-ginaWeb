@@ -1,0 +1,131 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-... tu código de integridad ..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <title>Portafolio Web</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="banner">
+            <div class="navbar">
+                <img src="../imagenes/logo-tienda.png" class="logo">
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="yeezy.html">YEEZY</a></li>
+                    <li><a href="adidas.html">ADIDAS</a></li>
+                    <li><a href="air jordan.html">AIR JORDAN</a></li>
+                    <li><a href="nike.html">NIKE</a></li>     
+                </ul>
+            </div>
+            <div class="texto">
+                <h2>NEW STYLE</h2>
+                <p>TIENDA DE ZAPATILLAS</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="custom-select" id="customSelect">
+                <div class="select-items" style="display: none;">
+                </div>
+                <div class="select-selected"></div>
+            </div>
+            <input type="text" id="campoBusqueda" placeholder="Buscar...">
+            <select id="selectItems"></select>
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila" id="fila">
+                <div class="item" id="item1" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/yeezy/yeezy1.png" alt="">
+                    </div>
+                    <p class="descripcion">Yeezy Boost 350 V2 Linen</p>
+                    <span class="precio">€ 333</span>
+                </div>
+                <div class="item" id="item2" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/yeezy/yeezy2.png" alt="">
+                    </div>
+                    <p class="descripcion" id>Yeezy Boost 350 V2 Dazzling Blue</p>
+                    <span class="precio">€ 323</span>
+                </div>
+                <div class="item" id="item3" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/yeezy/yeezy3.png" alt="">
+                    </div>
+                    <p class="descripcion">Yeezy Foam RNNR Stone Sage</p>
+                    <span class="precio">€ 257</span>
+                </div>
+                <div class="item" id="item4" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/jordan/jordan4.png" alt="">
+                    </div>
+                    <p class="descripcion">Yeezy Slide Flax</p>
+                    <span class="precio">€ 109</span>
+                </div>
+            </div>
+            <div class="fila" id="fila">
+                <div class="item" id="item5" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/yeezy/yeezy5.png" alt="">
+                    </div>
+                    <p class="descripcion">Yeezy Boost 350 V2 Cloud White (Reflective)</p>
+                    <span class="precio">€ 400</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/yeezy/yeezy6.png" alt="">
+                    </div>
+                    <p class="descripcion">Yeezy Boost 350 V2 Yeezreel (Non-Reflective)</p>
+                    <span class="precio">€ 260</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/yeezy/yeezy7.png" alt="">
+                    </div>
+                    <p class="descripcion">Yeezy Boost 700 V1 Magnet</p>
+                    <span class="precio">€ 536</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../imagenes/yeezy/yeezy8.png" alt="">
+                    </div>
+                    <p class="descripcion">Yeezy Boost V2 350 Beluga Reflective</p>
+                    <span class="precio">€ 1.011</span>
+                </div>
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="" alt="" id="img">
+                <h2 id="modelo">Yeezy MODEL 1</h2>
+                <p id="descripcion">Descripción Modelo 1</p>
+
+                <span class="precio" id="precio">€</span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="">SIZE</label>
+                        <select name="" id="">
+                            <option value="">40</option>
+                            <option value="">42</option>
+                            <option value="">44</option>
+                            <option value="">46</option>
+                        </select>
+                    </div>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../script/scrip"></script>
+</body>
+</html>
